@@ -1,5 +1,11 @@
 # 4-BIT-RIPPLE-COUNTER
 
+**EXP12: 4 BIT RIPPLE COUNTER**
+
+NAME: VIJAYAKUMAR S
+
+REG NO: 24900562
+
 **AIM:**
 
 To implement  4 Bit Ripple Counter using verilog and validating their functionality using their functional tables
@@ -24,17 +30,56 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 
 **Procedure**
 
-/* write all the steps invloved */
+ 1. Type the program in Quartus software.
+
+2. Compile and run the program.
+
+3. Generate the RTL schematic and save the logic diagram.
+
+4. Create nodes for inputs and outputs to generate the timing diagram.
+
+5. For different input combinations generate the timing diagram.
+
 
 **PROGRAM**
 
-/* Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
+ Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
 
- Developed by: RegisterNumber:
-*/
+ module bitrip (
+
+   input wire clk,  
+   
+   output reg [3:0] count 
+
+);
+
+always @(posedge clk) begin
+
+   if (count == 4'b1111)
+      
+       count <= 4'b0000;
+   
+   else
+      
+       count <= count + 1;
+
+end
+
+endmodule 
+
+
+ Developed by: VIJAYAKUMAR.S
+ 
+ RegisterNumber:24900562
+
 
 **RTL LOGIC FOR 4 Bit Ripple Counter**
+![4bitrip](https://github.com/user-attachments/assets/3ca7e6fd-69b2-4a38-b0ef-9bc06c8f948a)
 
 **TIMING DIGRAMS FOR 4 Bit Ripple Counter**
+![4bitripple](https://github.com/user-attachments/assets/15c72512-bbd7-416f-87b5-9f0479e6441c)
 
 **RESULTS**
+
+Thus the  4 Bit Ripple Counter using verilog is implemented and their functionality using their functional tables
+ is verified.
